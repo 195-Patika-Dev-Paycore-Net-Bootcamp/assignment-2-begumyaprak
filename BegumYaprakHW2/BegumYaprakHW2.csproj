@@ -8,10 +8,20 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <PackageReference Include="FluentValidation" Version="11.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Formatters.Xml" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.2.0" />
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.2.1" />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Model\" />
+    <None Remove="FluentValidation" />
+    <None Remove="Microsoft.AspNetCore.Mvc.Formatters.Xml" />
+    <None Remove="Microsoft.Extensions.DependencyInjection" />
+    <None Remove="FluentValidation.DependencyInjectionExtensions" />
+    <None Remove="FluentValidation.AspNetCore" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />

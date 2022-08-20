@@ -10,7 +10,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace BegumYaprakHW2.Controllers
 
 {
-    public class CommonResponse<Entity>
+    public class CommonResponse<Entity> where Entity:class        
     {
         public CommonResponse()
         {
@@ -50,7 +50,7 @@ namespace BegumYaprakHW2.Controllers
         {
             List<Staff> list = new();
 
-            // list.Add(new Staff { Id = 1, Name = "Begum ", Lastname = "Yaprak", DateOfBirth = new DateTime(1999,08,21) ,Email = "begmyaprak@gmail.com", PhoneNumber = 05346344806, Salary = 5000 });
+            //list.Add(new Staff { Id = 1, Name = "Begum ", Lastname = "Yaprak", DateOfBirth = new DateTime(1999,08,21) ,Email = "begmyaprak@gmail.com", PhoneNumber = 53463448, Salary = 5000 });
 
             return new CommonResponse<List<Staff>>(list);
         }
@@ -58,8 +58,7 @@ namespace BegumYaprakHW2.Controllers
 
 
         [HttpGet("GetAll")]
-       // [Route("{GetAll}")]
-
+      
         public CommonResponse<List<Staff>> GetAll()
         {
             return GetList();
